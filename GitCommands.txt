@@ -1,0 +1,148 @@
+#Git Flows Local from scratch#
+===========================================================================================================================================
+Create a GitHub Repo on Github. --> Create a folder on your local machine. --> run cmd git init to initialise. Create file. --> Stage changes by cmd git add. 
+--> Commit changes using git commit -m "some text to what and why" --> add remote origin with cmd git remote add origin <git repo> --> then enter cmd git branch -M main. -->
+Push changes with cmd git push -u origin main.
+
+#With all in place. Flow is as follows#
+
+Write code --> stage changes via cmd git add --> commit changes via cmd git commit --> push changes via cmd git push --> pull
+
+===========================================================================================================================================
+#Git Flow from clone.
+
+from your git folder (ONLY FOR YOU ELLIOT) run a git clone https://github.com/Elliotcomputerguy/LearningPython.git We can then follow the usual work flow of add --> commit --> push --> pull etc
+
+Otherwise you would create a folder to put it in. So mkdir folder1, run a git clone and then another folder LearningPython will be created inside unsing the example above.   
+===========================================================================================================================================
+
+#Git flow with branches#
+
+create a branch via cmd git checkout -b <name> --> add code etc and save. --> Git add <file> --> Git commit -m "" --> Git push --set-upstream origin <branchname> 
+Merge from Github portal is the standard way rather than merging from terminal with git merge <branch>. Once you have merged. swap to your main branch with git checkout main and 
+delete the other branch with cmd git branch -d <branchname> then run cmd git pull from main branch to bring down the merged file.
+===========================================================================================================================================
+
+#Undoing in Git#
+
+To unstage: git reset <filename>
+To uncommit: git reset HEAD~1
+
+git log to see hashes for commits. You can copy a hash of an old commit to go back to. 
+git reset <hash>
+git reset --hard <hash> will also remove as well as unstage
+==========================================================================================================================================
+
+#Forking
+
+This is where you can fork some eleses repo and bring it under a repo that you have full access too.
+==========================================================================================================================================
+
+CMDS:
+
+
+
+
+
+git init - Will initialise a folder with Git. So when I create a new folder and want to upload a local file to Github i run the git init.
+           [When you attempt to push after adding for tracking and commiting you wont be able to push as there is no connection]  
+           [So we need to create the connection by adding a new repo in GitHub]
+           [git remote add origin and name of the repo Example: https://github.com/ElliottComputerGuy/new-Demo1.git] 
+
+           [Full cmd]
+           [git remote add origin https://github.com/ElliottComputerGuy/Demo-repo.git]
+           [git branch -M main]
+           [git push -u origin main]
+
+git remote add name/name.git - Creates a connection from your local folder to your github repo so you can push. 
+
+git remote -v - Will show all repos i have connected too. 
+ 
+git clone - Bring a repo that is hosted somewhere like github onto a folder on your local machine
+
+git add - Track your files and changes in Git
+          [ git add . means to add all files ]
+          [ When text is green it indicates that files are tracked and ready to be commited]
+
+git restore --staged <file> to unstage
+
+git commit - Save your files in Git
+             [-m means message and will relate to the what and why to your change]
+             [second -m is for description]
+             [This only saves the code locally - We now need to use git push to push to our Git repo]
+git commit -am - you can add and commit at the same time only for previous modofied files. Not new files.
+
+
+git push - Upload Git commits to a remote repo, like Github
+           [Arguments to specify branch: origin main]           
+
+
+           [If not on windows follow below]
+           [setup ssh keys. ssh-keygen -t rsa -b rsa -b 4096 -c "email@example.com". You be prompted to name your key file]
+           [and enter a pass phrase or not. Search for your key file and upload the key file that has .pub appended. The onw without]
+           [.pub is your private key. On Github go to SSH and GPG keys. Add new key. ]
+           [goto help file in Github for adding your key to your ssh-agent]
+
+
+git pull - Download changes from a remote repo to your local machine, the opposite of push
+
+git status - Checks what file has been modified
+
+git branch - Checks to see what branch you are on. 
+
+git branch -d - will delete your branch
+
+git checkout - switch between branches
+
+git checkout -b "Branch-name" - This is to create a new branch
+             [When we create a new branch we cannot push as we have no branch up in Github. It is only local so we need to create a upstream branch]
+             [git push --set-upstream origin <branchname> ]
+
+git merge - Allows you to merge your branch with your main branch
+            [cmd git merge <branch>]
+
+git diff - Allows you to check what difference's have been made before you merge.  
+           [cmd git diff <name of branch>
+
+git reset <file> - Will allow you to unstage if you staged a file.
+
+
+
+
+
+
+md - means markdown
+
+create a new repository on the command line
+
+echo "# Demo-repo 1" >> README.md
+git init
+git add README.md
+git commit -m "Second commit"
+git branch -M main
+git remote add origin https://github.com/Elliotcomputerguy/MyBashScripts.git
+git push -u origin main
+
+
+
+push an existing repository from the command line
+
+git remote add origin https://github.com/ElliotComputerGuy/MyWebsite.git
+git branch -M main
+git push -u origin main
+
+
+
+-Errors
+
+fatal: The current branch main has multiple upstream branches, refusing to push.
+
+Enter cmd: git config remote.origin.push HEAD
+
+
+
+
+
+
+
+
