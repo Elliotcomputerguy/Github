@@ -28,21 +28,18 @@ delete the other branch with cmd git branch -d <branchname> then run cmd git pul
 To unstage: git reset <filename>
 To uncommit: git reset HEAD~1
 
+git restore --staged file (to unstage)
+
 git log to see hashes for commits. You can copy a hash of an old commit to go back to. 
 git reset <hash>
 git reset --hard <hash> will also remove as well as unstage
 ==========================================================================================================================================
-
 #Forking
 
 This is where you can fork some eleses repo and bring it under a repo that you have full access too.
 ==========================================================================================================================================
 
 CMDS:
-
-
-
-
 
 git init - Will initialise a folder with Git. So when I create a new folder and want to upload a local file to Github i run the git init.
            [When you attempt to push after adding for tracking and commiting you wont be able to push as there is no connection]  
@@ -106,11 +103,6 @@ git diff - Allows you to check what difference's have been made before you merge
 
 git reset <file> - Will allow you to unstage if you staged a file.
 
-
-
-
-
-
 md - means markdown
 
 create a new repository on the command line
@@ -124,7 +116,6 @@ git remote add origin https://github.com/Elliotcomputerguy/MyBashScripts.git
 git push -u origin main
 
 
-
 push an existing repository from the command line
 
 git remote add origin https://github.com/ElliotComputerGuy/MyWebsite.git
@@ -132,17 +123,8 @@ git branch -M main
 git push -u origin main
 
 
-
 -Errors
 
 fatal: The current branch main has multiple upstream branches, refusing to push.
 
 Enter cmd: git config remote.origin.push HEAD
-
-
-
-
-
-
-
-
