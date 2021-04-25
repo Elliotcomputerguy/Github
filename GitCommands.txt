@@ -128,3 +128,8 @@ git push -u origin main
 fatal: The current branch main has multiple upstream branches, refusing to push.
 
 Enter cmd: git config remote.origin.push HEAD
+
+git pull
+git checkout dev
+git merge master
+git push
