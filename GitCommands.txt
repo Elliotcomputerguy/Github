@@ -115,6 +115,26 @@ git branch -M main
 git remote add origin https://github.com/Elliotcomputerguy/MyBashScripts.git
 git push -u origin main
 
+--Rebaseing 
+
+$ git checkout master                        
+  /* ensure you are on the master branch */
+
+$ git pull                                   
+  /* pull the latest from the remote */ 
+
+$ git checkout my-feature-branch             
+  /* checkout the feature branch */
+
+$ git push origin my-feature-branch          
+  /* update your copy in the repo */
+
+$ git rebase master                          
+  /* rebase on the master branch */
+
+$ git push origin my-feature-branch --force  
+  /* force update the remote */
+
 
 push an existing repository from the command line
 
@@ -122,6 +142,8 @@ git remote add origin https://github.com/ElliotComputerGuy/MyWebsite.git
 git branch -M main
 git push -u origin main
 
+-Remove old branches
+git fetch -p
 
 -Errors
 
@@ -133,3 +155,14 @@ git pull
 git checkout dev
 git merge master
 git push
+
+Source for github: https://www.youtube.com/watch?v=RGOj5yH7evk
+
+Download:
+https://git-scm.com/
+
+Install instructions:
+
+Download VS code
+Download Python
+Open VS code and navigate to source control. Download Git. Done 
