@@ -115,6 +115,9 @@ git branch -M main
 git remote add origin https://github.com/Elliotcomputerguy/MyBashScripts.git
 git push -u origin main
 
+# Create repository
+git init my-infra && cd my-infra
+
 --Rebaseing 
 
 $ git checkout master                        
